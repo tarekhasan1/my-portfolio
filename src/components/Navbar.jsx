@@ -11,6 +11,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 10px 0px;
+position: fixed;
 `
 const Links = styled.div`
 display: flex;
@@ -43,6 +44,11 @@ const ListItem = styled.li`
 cursor: pointer;
 `
 
+const A = styled.a`
+text-decoration: none;
+color: white;
+`
+
 const Button = styled.button`
 width: 100px;
 padding: 10px;
@@ -61,10 +67,11 @@ const Navbar = () => {
                 <Links>
                 <Logo src='https://logodix.com/logo/1618842.png'></Logo>
                 <List>
-                <ListItem>Home</ListItem>
-                <ListItem>Resume</ListItem>
-                <ListItem>Works</ListItem>
-                <ListItem>Contact</ListItem>
+                <ListItem><A href='#home'>Home</A></ListItem>
+                <ListItem><A href='#about'>About</A></ListItem>
+                <ListItem><A href='#skills'>Skills</A></ListItem>
+                <ListItem><A href='#works'>Works</A></ListItem>
+                <ListItem><A href='#contact'>Contact</A></ListItem>
                 </List>
                 </Links>
                 <Icons>

@@ -3,10 +3,12 @@ import styled, { keyframes } from 'styled-components';
 
 const Section = styled.div`
   min-height: 100vh;
-  width: 1400px;
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
   scroll-snap-align: center;
-`
+  padding-top: 10vh;
+`;
 
 const SkillsContainer = styled.div`
   display: flex;
@@ -83,18 +85,21 @@ const Progress = styled.div`
 `;
 
 const Title = styled.h1`
-    font-size: 32px;
-    text-align: center;
-    margin: 200px auto;
+  font-size: 32px;
+  text-align: center;
+  margin: 100px auto;
 
-    @media (max-width: 768px) {
-        margin: 100px auto;
-    }
+  @media (max-width: 768px) {
+    margin: 50px auto;
+    font-size: 28px;
+  }
 
-    @media (max-width: 480px) {
-        margin: 50px auto;
-    }
+  @media (max-width: 480px) {
+    margin: 30px auto;
+    font-size: 24px;
+  }
 `;
+
 
 const Skills = () => {
   const skills = [
@@ -116,7 +121,7 @@ const Skills = () => {
   ];
 
   return (
-    <Section>
+    <Section id="skills">
         <Title>My Skills On Different Technologies</Title>
     <SkillsContainer>
       {skills.map((skill) => (
