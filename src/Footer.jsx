@@ -5,6 +5,7 @@ const FooterContainer = styled.footer`
   display: flex;
   justify-content: space-between;
   padding: 20px;
+
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column-reverse;

@@ -7,7 +7,7 @@ import Works from "./components/Works"
 import styled from 'styled-components';
 
 const Container = styled.div`
-  height: 100vh;
+  height: 91vh;
   max-width: 1400px;
   margin: 0 auto;
   scroll-snap-type: y mandatory;

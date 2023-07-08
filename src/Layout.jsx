@@ -11,11 +11,17 @@ const Container = styled.div`
   }
 `;
 
+const Content = styled.div`
+margin-top: 70px;
+`
+
 const Layout = () => {
   return (
     <Container>
       <Navbar></Navbar>
+      <Content>
       <App></App>
+      </Content>
     </Container>
   );
 };

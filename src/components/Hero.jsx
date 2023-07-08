@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const DesignationList = [
-  'Junior MERN Stack Web Developer',
+  'MERN Stack Web Developer',
   'Front-End Developer',
   'Javascript Developer',
   'ReactJS Developer',
@@ -11,7 +11,7 @@ const DesignationList = [
 ];
 
 const Container = styled.div`
-  height: 90vh;
+  min-height: 80vh;
   max-width: 1400px;
   scroll-snap-align: center;
   display: flex;

@@ -2,7 +2,7 @@ import React from "react";
 import { styled } from "styled-components";
 
 const Section = styled.div`
-  height: 80vh;
+  min-height: 80vh;
   scroll-snap-align: center;
   padding-top: 10vh;
 `;
