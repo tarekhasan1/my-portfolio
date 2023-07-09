@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Toytour from "./../../public/images/toy-tour.png";
 
 const Section = styled.div`
   min-height: 80vh;
@@ -68,7 +67,7 @@ const CardImage = styled.img`
 
   &:hover {
     transform: translateY(0);
-    animation: scroll 5s linear infinite;
+    animation: scroll 10s linear infinite;
     @keyframes scroll {
       0% {
         transform: translateY(0);
@@ -117,15 +116,16 @@ const ViewDetailsButton = styled.button`
 `;
 
 const Modal = styled.div`
+font-family: 'roboto', cursive;
 z-index: 99999999;
-  width: 75vw;
+  width: 800px;
   position: fixed;
   padding: 10px;
   border-radius: 5px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #ffffff;
+  background-color: #e0d4d4;
   color: black;
 `;
 
@@ -158,7 +158,7 @@ const Works = () => {
         "MongoDB",
       ],
       image:
-        "https://drive.google.com/file/d/1q8QgPvqQOwsDvQ4lN9ZQEMsHBQ4QdFdi/view?usp=sharing",
+        "https://imgtr.ee/images/2023/07/09/d7747c117dcef2364e59aac705596765.png",
       liveLink: "https://toy-tour.web.app/",
       clientGithubLink: "https://github.com/tarekhasan1/toy-tour",
       serverGithubLink: "https://github.com/tarekhasan1/toy-tour-server",
@@ -179,7 +179,7 @@ const Works = () => {
         "Express.js",
       ],
       image:
-        "https://images.pexels.com/photos/2291428/pexels-photo-2291428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://imgtr.ee/images/2023/07/09/04d7aeb7e7dc1967e89307d2e182ed74.jpeg",
       liveLink: "https://epicurean-edge.web.app/",
       clientGithubLink: "https://github.com/tarekhasan1/epicurean-edge",
       serverGithubLink: "https://github.com/tarekhasan1/epicurean-edge-server",
@@ -203,7 +203,7 @@ const Works = () => {
         "MongoDB",
       ],
       image:
-        "https://images.pexels.com/photos/2291428/pexels-photo-2291428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://imgtr.ee/images/2023/07/09/6432e5f8cf567367528bda989c3cbfc7.jpeg",
       liveLink: "https://melodic-mastery-6b24a.web.app/",
       clientGithubLink: "https://github.com/tarekhasan1/melodic-mastery-client",
       serverGithubLink: "https://github.com/tarekhasan1/melodic-mastery-server",
@@ -226,7 +226,7 @@ const Works = () => {
             </ImageContainer>
             <CardContent>
               <ProjectName>{project.name}</ProjectName>
-              <ProjectType>Project Type: {project.type}</ProjectType>
+              <ProjectType>{project.type}</ProjectType>
               <Technologies>
                 Technologies: {project.technologies.join(", ")}
               </Technologies>
@@ -238,34 +238,35 @@ const Works = () => {
         ))}
         {selectedProject && (
           <Modal>
-            {/* Modal content with project details */}
-            <h2>{selectedProject.name}</h2>
-            <h5>{selectedProject.type}</h5>
+            <h2 style={{marginTop: "15px"}}>{selectedProject.name}</h2>
+            <h5 style={{marginBottom: "15px"}}>{selectedProject.type}</h5>
             <p>{selectedProject.description}</p>
-            <h4>Technology:</h4>
+            <h4 style={{marginTop: "5px"}}>Technology:</h4>
             <ul style={{marginBottom: "15px"}}>
               {selectedProject.technologies.map((technology) => (
                 <li key={technology}>{technology}</li>
               ))}
             </ul>
-            <a style={{marginRight: "7px", textDecoration: "none"}} target="_blank" href={selectedProject.liveLink}>
+            <a style={{marginRight: "7px", textDecoration: "none", color: "blueviolet"}} target="_blank" href={selectedProject.liveLink}>
               Live Preview
             </a>
-            <a style={{marginRight: "7px", textDecoration: "none"}} target="_blank" href={selectedProject.clientGithubLink}>
+            <a style={{marginRight: "7px", textDecoration: "none", color: "blueviolet"}} target="_blank" href={selectedProject.clientGithubLink}>
               Github Client
             </a>
-            <a style={{marginRight: "7px", textDecoration: "none"}} target="_blank" href={selectedProject.serverGithubLink}>
+            <a style={{marginRight: "7px", textDecoration: "none", color: "blueviolet"}} target="_blank" href={selectedProject.serverGithubLink}>
               Github Server
             </a>
             <br />
             <button
               style={{
-                color: "red",
+                color: "white",
+                backgroundColor: "tomato",
                 marginBottom: "5px",
                 border: "none",
                 borderRadius: "4px",
                 padding: "5px",
                 marginTop: "10px",
+                fontSize: "20px"
               }}
               onClick={closeModal}
             >
