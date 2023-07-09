@@ -10,14 +10,18 @@ const Container = styled.div`
   height: 91vh;
   max-width: 1400px;
   margin: 0 auto;
-  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   overflow-y: auto;
+  overflow-x: hidden;
   scrollbar-width: none;
   color: white;
   background-size: cover;
   &::-webkit-scrollbar{
     display: none;
+  }
+
+  @media (min-width: 1024px){
+    scroll-snap-type: y mandatory;
   }
 `
 

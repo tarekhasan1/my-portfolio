@@ -30,7 +30,7 @@ const Container = styled.div`
 const FormSection = styled.div`
   padding: 2rem;
   margin-bottom: 2rem;
-  width: 100%;
+  width: 98%;
   max-width: 400px;
   order: 2;
 
@@ -80,7 +80,7 @@ const ImageSection = styled.div`
   order: 1;
 
   img {
-    max-width: 100%;
+    max-width: 98%;
     height: auto;
   }
 
