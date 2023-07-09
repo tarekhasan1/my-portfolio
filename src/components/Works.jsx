@@ -118,7 +118,6 @@ const ViewDetailsButton = styled.button`
 const Modal = styled.div`
 font-family: 'roboto', cursive;
 z-index: 99999999;
-  width: 800px;
   position: fixed;
   padding: 10px;
   border-radius: 5px;

@@ -22,6 +22,8 @@ const SectionContainer = styled.section`
 
 const LeftContainer = styled.div`
   width: 100%;
+  justify-content: center;
+  text-align: center;
 
   @media (min-width: 768px) {
     width: 40%;
@@ -30,8 +32,23 @@ const LeftContainer = styled.div`
 `;
 
 const Image = styled.img`
-  width: 100%;
-  height: auto;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+  @media (max-width: 1024px) {
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+  }
 `;
 
 const RightContainer = styled.div`
@@ -82,7 +99,7 @@ const SendButton = styled.button`
   }
 `;
 
-const Heading = styled.h1`
+const Heading = styled.h2`
     text-align: center;
     padding: 10px auto;
     margin-bottom: 50px;
@@ -95,7 +112,7 @@ const Who = () => {
       <SectionContainer>
         <LeftContainer>
           <Image
-            src="https://camo.githubusercontent.com/40165a147c3dcea0fa1db780bb533fc5f98546ccfb9d5d05ddb2f429277f5348/68747470733a2f2f616e616c7974696373696e6469616d61672e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031382f31322f646576656c6f7065722d6472696262626c652e676966"
+            src="https://imgtr.ee/images/2023/07/09/4be5488d67f63913e3eb00f2595f125f.png"
             alt="Your Image"
           />
         </LeftContainer>

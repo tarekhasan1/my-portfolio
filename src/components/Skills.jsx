@@ -84,10 +84,10 @@ const Progress = styled.div`
   background-color: #3498db;
 `;
 
-const Title = styled.h1`
-  font-size: 32px;
+const Title = styled.h2`
   text-align: center;
-  margin: 100px auto;
+  margin-top: 50px;
+  margin-bottom: 80px;
 
   @media (max-width: 768px) {
     margin: 50px auto;
@@ -104,25 +104,25 @@ const Title = styled.h1`
 const Skills = () => {
   const skills = [
     { name: 'HTML5', icon: 'https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_html_icon_130541.png', progress: 90 },
-    { name: 'CSS3', icon: 'https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_css_icon_130661.png', progress: 85 },
-    { name: 'Bootstrap', icon: 'https://cdn.icon-icons.com/icons2/2415/PNG/512/bootstrap_plain_logo_icon_146619.png', progress: 80 },
+    { name: 'CSS3', icon: 'https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_css_icon_130661.png', progress: 75 },
+    { name: 'Bootstrap', icon: 'https://cdn.icon-icons.com/icons2/2415/PNG/512/bootstrap_plain_logo_icon_146619.png', progress: 90 },
     { name: 'Tailwind CSS', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png', progress: 75 },
-    { name: 'JavaScript', icon: 'https://cdn.icon-icons.com/icons2/2108/PNG/512/javascript_icon_130900.png', progress: 95 },
-    { name: 'ES6', icon: 'https://juststickers.in/wp-content/uploads/2017/11/es6-original-badge-264x264.png', progress: 85 },
-    { name: 'React.js', icon: 'https://cdn.icon-icons.com/icons2/2415/PNG/512/react_original_wordmark_logo_icon_146375.png', progress: 90 },
-    { name: 'Node.js', icon: 'https://cdn.icon-icons.com/icons2/2415/PNG/512/nodejs_plain_logo_icon_146409.png', progress: 85 },
-    { name: 'Express.js', icon: 'https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png', progress: 80 },
-    { name: 'Next.js', icon: 'https://cdn.icon-icons.com/icons2/3392/PNG/512/nextjs_icon_213852.png', progress: 75 },
-    { name: 'MongoDB', icon: 'https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_wordmark_logo_icon_146425.png', progress: 90 },
+    { name: 'JavaScript', icon: 'https://cdn.icon-icons.com/icons2/2108/PNG/512/javascript_icon_130900.png', progress: 80 },
+    { name: 'ES6', icon: 'https://juststickers.in/wp-content/uploads/2017/11/es6-original-badge-264x264.png', progress: 70 },
+    { name: 'React.js', icon: 'https://cdn.icon-icons.com/icons2/2415/PNG/512/react_original_wordmark_logo_icon_146375.png', progress: 80 },
+    { name: 'Node.js', icon: 'https://cdn.icon-icons.com/icons2/2415/PNG/512/nodejs_plain_logo_icon_146409.png', progress: 50 },
+    { name: 'Express.js', icon: 'https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png', progress: 50 },
+    { name: 'Next.js', icon: 'https://cdn.icon-icons.com/icons2/3392/PNG/512/nextjs_icon_213852.png', progress: 40 },
+    { name: 'MongoDB', icon: 'https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_wordmark_logo_icon_146425.png', progress: 70 },
     { name: 'Firebase', icon: 'https://cdn.icon-icons.com/icons2/2699/PNG/512/firebase_logo_icon_171157.png', progress: 85 },
-    { name: 'Git', icon: 'https://cdn.icon-icons.com/icons2/2415/PNG/512/git_original_wordmark_logo_icon_146510.png', progress: 90 },
+    { name: 'Git', icon: 'https://cdn.icon-icons.com/icons2/2415/PNG/512/git_original_wordmark_logo_icon_146510.png', progress: 70 },
     { name: 'GitHub', icon: 'https://cdn.icon-icons.com/icons2/2415/PNG/512/github_original_wordmark_logo_icon_146506.png', progress: 85 },
     { name: 'Vercel', icon: 'https://cdn.icon-icons.com/icons2/3915/PNG/512/vercel_logo_icon_249276.png', progress: 80 },
   ];
 
   return (
     <Section id="skills">
-        <Title>My Skills On Different Technologies</Title>
+        <Title>My Skills</Title>
     <SkillsContainer>
       {skills.map((skill) => (
         <SkillItem key={skill.name}>

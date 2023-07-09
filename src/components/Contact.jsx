@@ -11,9 +11,8 @@ const Section = styled.div`
   padding-top: 10vh;
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
   text-align: center;
-  margin-bottom: 20px;
 `
 
 const Container = styled.div`
