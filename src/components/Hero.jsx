@@ -140,8 +140,24 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, [currentDesignationIndex]);
 
-  const handleDownloadResume = () => {
-    // Add logic to start downloading the resume
+  const handleDownloadResume = async () => {
+    const filePath = '/src/images/TarekHasan-Resume.pdf';
+    const response = await fetch(filePath);
+    const blob = await response.blob();
+  
+    // Create a temporary URL for the blob
+    const url = URL.createObjectURL(blob);
+  
+    // Create a temporary <a> element and set its attributes
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'TarekHasan-Resume.pdf';
+  
+    // Simulate a click event on the <a> element to trigger the download
+    link.click();
+  
+    // Clean up the temporary URL object
+    URL.revokeObjectURL(url);
   };
 
   return (

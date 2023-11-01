@@ -112,8 +112,8 @@ const Who = () => {
       <SectionContainer>
         <LeftContainer>
           <Image
-            src="https://imgtr.ee/images/2023/07/09/4be5488d67f63913e3eb00f2595f125f.png"
-            alt="Your Image"
+            src="https://i.ibb.co/2ZWfDHh/MG-5033-removebg-preview-1.png"
+            alt="My Profile Image"
           />
         </LeftContainer>
         <RightContainer>

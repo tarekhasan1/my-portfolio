@@ -50,7 +50,7 @@ const Card = styled.div`
   margin: 20px auto;
   border: none;
   border-radius: 8px;
-  box-shadow: 0 4px 12px whitesmoke;
+  box-shadow: 0 2px 4px whitesmoke;
 `;
 
 const ImageContainer = styled.div`
@@ -157,7 +157,7 @@ const Works = () => {
         "MongoDB",
       ],
       image:
-        "https://imgtr.ee/images/2023/07/09/d7747c117dcef2364e59aac705596765.png",
+        "https://i.ibb.co/dQksWbM/toy-tour.png",
       liveLink: "https://toy-tour.web.app/",
       clientGithubLink: "https://github.com/tarekhasan1/toy-tour",
       serverGithubLink: "https://github.com/tarekhasan1/toy-tour-server",
@@ -178,7 +178,7 @@ const Works = () => {
         "Express.js",
       ],
       image:
-        "https://imgtr.ee/images/2023/07/09/04d7aeb7e7dc1967e89307d2e182ed74.jpeg",
+        "https://i.ibb.co/x8pdfkJ/Web-capture-10-7-2023-1020-epicurean-edge-web-app.jpg",
       liveLink: "https://epicurean-edge.web.app/",
       clientGithubLink: "https://github.com/tarekhasan1/epicurean-edge",
       serverGithubLink: "https://github.com/tarekhasan1/epicurean-edge-server",
@@ -202,7 +202,7 @@ const Works = () => {
         "MongoDB",
       ],
       image:
-        "https://imgtr.ee/images/2023/07/09/6432e5f8cf567367528bda989c3cbfc7.jpeg",
+        "https://i.ibb.co/1rKJjzM/Web-capture-10-7-2023-05545-melodic-mastery-6b24a-web-app.jpg",
       liveLink: "https://melodic-mastery-6b24a.web.app/",
       clientGithubLink: "https://github.com/tarekhasan1/melodic-mastery-client",
       serverGithubLink: "https://github.com/tarekhasan1/melodic-mastery-server",

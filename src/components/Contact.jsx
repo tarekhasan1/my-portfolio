@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { styled } from 'styled-components';
 import Footer from '../Footer';
 
@@ -91,19 +93,21 @@ const ImageSection = styled.div`
 `;
 
 const Contact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const data = useRef();
+
+  const sendEmail = (e) => {
+    console.log('started');
     e.preventDefault();
-    // Send the message using a server-side implementation for email sending
-    // Here you can use libraries like nodemailer to send the email
-    console.log(`Sending message: Name: ${name}, Email: ${email}, Message: ${message}`);
-    // Reset form fields
-    setName('');
-    setEmail('');
-    setMessage('');
+
+    emailjs.sendForm('service-id', 'template_id', Form.current, 'public-key_i')
+      .then((result) => {
+          console.log(result.text);
+          console.log('successfully sent mail');
+      }, (error) => {
+          console.log(error.text);
+          console.log("failed!");
+      });
   };
 
   return (
@@ -111,32 +115,29 @@ const Contact = () => {
       <Title>Contact Us</Title>
       <Container>
         <FormSection>
-          <Form onSubmit={handleSubmit}>
+          <Form ref={data} onSubmit={sendEmail}>
             <FormLabel>Name</FormLabel>
             <FormInput
               type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              name="from_name"
               required
             />
 
             <FormLabel>Email</FormLabel>
             <FormInput
               type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              name="from_email"
               required
             />
 
             <FormLabel>Message</FormLabel>
             <FormTextarea
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+            name="message"
               required
             />
 
-            <FormButton type="submit">Send Message</FormButton>
-          </Form>
+          <FormButton type="submit" value="Send">Send Message</FormButton>
+    </Form> 
         </FormSection>
         <ImageSection>
           <img src="https://www.pngmart.com/files/7/Support-PNG-Transparent-Picture.png" alt="Contact" />

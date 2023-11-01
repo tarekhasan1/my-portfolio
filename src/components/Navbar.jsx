@@ -172,6 +172,16 @@ const Navbar = () => {
               </A>
             </ListItem>
             <ListItem>
+              <A href="#blog" className={activeLink === 'blog' ? 'active' : ''}>
+                Blog
+              </A>
+            </ListItem>
+            <ListItem>
+              <A href="#resources" className={activeLink === 'resources' ? 'active' : ''}>
+                Resources
+              </A>
+            </ListItem>
+            <ListItem>
               <A href="#contact" className={activeLink === 'contact' ? 'active' : ''}>
                 Contact
               </A>
